@@ -26,9 +26,14 @@ Vagrant.configure("2") do |config|
   
   # proxy configuration for mitrais network
   if Vagrant.has_plugin?("vagrant-proxyconf")
+    # this is mitrais.wsus proxy for non-windows os. Sometimes it doesn't work
     config.proxy.http     = "http://mitrais.wsus:3128/"
     config.proxy.https    = "http://mitrais.wsus:3128/"
     config.proxy.no_proxy = "localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+#    # this is cntlm proxy, usually it's 10.0.2.2
+#    config.proxy.http     = "http://10.0.2.2:3128/"
+#    config.proxy.https    = "http://10.0.2.2:3128/"
+#    config.proxy.no_proxy = "localhost,127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
   end
   
 end
