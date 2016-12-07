@@ -30,9 +30,6 @@ Try use cntlm if it still doesn't work.
 user: admin
 pass: password
 
-user: trainer
-pass: trainer
-
 ## Sonarqube
 user: admin
 pass: password
